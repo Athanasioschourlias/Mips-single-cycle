@@ -7,8 +7,9 @@ input RegDst,AluSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch;
 
 wire [31:0] Instruction;
 
-input [1:0] ALUOp;
-wire [3:0] ALUCtrl;
+input [3:0] ALUOp;
+//Changed the size of the reg in order to satisfy our needs
+wire [4:0] ALUCtrl;
 wire [31:0] ALUout;
 wire Zero;
 
