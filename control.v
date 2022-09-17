@@ -10,7 +10,6 @@ output reg MemRead;
 output reg MemWrite;
 output reg Branch;
 
-//TODO- Check ti allo epireazetai me thn allagh afth
 output reg [3:0] AluOP;
 
 
@@ -45,7 +44,7 @@ always @(opcode) begin
         //In order now not to keep the "state" of the previous cycle wich also means that we will create memmory cells(the compiler)
         //We introduce a default value so no state needs to be  stored and we always pass a value even an dummy one.
         //An den eixame to defaul kai dhmiourgousame kelia mnhmhs tote to kykloma mas den tha htan syndiastiko.
-        default: {RegDst,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,AluOP}=9'bxxx_xxx_x_xx;
+        default: {RegDst,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,AluOP}=11'bxxx_xxx_x_xxxx;
         //We can also find the signal for the no-op
     
     endcase
