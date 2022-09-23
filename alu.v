@@ -30,13 +30,13 @@ always @(ALUop, opA, opB) begin
 		 - multiplication of two unsigned integers.
 		 - Upper 32 bits stored in special register hi and the Lower 32 bits stored in special register lo 
 		*/
-		5'b01000: assign {hi, lo}=opA*opB; 
+		5'b01000: {hi, lo}=opA*opB; 
 		/* 
 		 - div
 		 - division of two unsigned integers.
 		 - Remainder stored in special register hi and quotient stored in the special register lo.
 		*/
-		5'b01010: assign {hi, lo}=opA/opB;
+		5'b01010: {hi, lo}=opA/opB;
 
 		5'b10000: result=opA<<<1; // sll
 		5'b10010: result=opA>>>1; // srl

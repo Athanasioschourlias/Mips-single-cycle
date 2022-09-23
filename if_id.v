@@ -10,8 +10,9 @@ input [(s-1):0] if_inst;
 output [(s-1):0] id_inst;
 
 always @(posedge clk) begin
-    if (reset == 1'b0) begin
-        id_inst <= 32'bx // Reference the controler module, when x all the digits
+    if (reset == 1'b1) begin
+        id_inst <= 32'b0 // Reference the controler module, when x all the digits
+        //NEVER x when reset, always 0 | 1
     end else begin
         id_inst <= if_inst
     end
