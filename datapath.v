@@ -43,6 +43,7 @@ wire [31:0] mem_ALUout;
 wire [31:0] mem_zero;
 
 
+//TODO - ADD CONTROL SIGNALS TO THE PIPELINE REGISTERS
 /*
     Pipeline stagets of the canonical pipeline
 */

@@ -29,10 +29,10 @@ output [(s-1):0] ex_id_signExtend;
 always @(posedge clk) begin
     if (reset == 1'b0) begin
         //all the commands sould perform an no-op
-        ex_PCadr <= 32'bx 
-        ex_ReadRegister1 <= 32'bx 
-        ex_ReadRegister2 <= 32'bx 
-        ex_signExtend <= 32'bx 
+        ex_PCadr <= 32'b0 
+        ex_ReadRegister1 <= 32'b0
+        ex_ReadRegister2 <= 32'b0 
+        ex_signExtend <= 32'b0 
     end else begin
         ex_PCadr <= id_PCadr
         ex_ReadRegister1 <= id_ReadRegister1
