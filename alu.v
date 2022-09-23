@@ -12,8 +12,8 @@ output zero; //1 if result is 0
 assign zero = (result==0);
 
 //The two registers we need for the multiplication and division that are not directly manipulated from the programmer.
-reg [31:0] hi
-reg [31:0] lo
+reg [31:0] hi;
+reg [31:0] lo;
 
 always @(ALUop, opA, opB) begin
 	case(ALUop)
